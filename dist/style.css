@@ -18,13 +18,8 @@ p{
     width: 100%;
     height: 100vh;
     overflow: hidden;
-}
-
-.backgroundImg{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index:-5;
+    background-image: url(images/bg_rest-v2.jpg);
+    background-size: contain;
 }
 
 .header{
