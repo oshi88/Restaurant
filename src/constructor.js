@@ -23,6 +23,21 @@ function divCreator(style,text){
     return div;
 }
 
+function itemCreator(imageUrl,title,discription){
+    const item = divCreator('item');
+    const image = document.createElement('img');
+    image.src = imageUrl;
+    const itemTitle = document.createElement('h2');
+    itemTitle.textContent = title;
+    const itemDisc = document.createElement('p');
+    itemDisc.textContent = discription;
+
+    item.appendChild(image);
+    item.appendChild(itemTitle);
+    item.appendChild(itemDisc);
+    return item;
+}
+
 export {
-    paragraph,imgCreator,divCreator
+    paragraph,imgCreator,divCreator,itemCreator
 };

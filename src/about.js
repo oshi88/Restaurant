@@ -1,7 +1,7 @@
 import {paragraph,imgCreator,divCreator} from "./constructor";
 
- function aboutPage(content){
-    const container = divCreator('container');
+ function aboutPage(){
+    const container = divCreator('innerContainer');
 
     const aboutContainer = divCreator('aboutContainer');
     const welcome = divCreator('welcomeText');
@@ -13,10 +13,16 @@ import {paragraph,imgCreator,divCreator} from "./constructor";
     aboutContainer.appendChild(hR1);
     aboutContainer.appendChild(aboutText);
     container.appendChild(aboutContainer);
-    content.appendChild(container);
+    
+    return container;
 
  }
 
+ function loadAbout(){
+    const main = document.getElementById('main');
+    main.innerHTML = '';
+    main.appendChild(aboutPage());
+ }
  export{
-   aboutPage
+   loadAbout
  }

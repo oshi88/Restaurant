@@ -2,8 +2,8 @@ import {paragraph,imgCreator,divCreator} from "./constructor";
 
 
 
-function homeCreate(content){
-    const container = divCreator('container');
+function homeCreate(){
+    const container = divCreator('innerContainer');
 
     const welcome = divCreator('welcomeText');
     welcome.innerHTML = 'Welcome';
@@ -17,11 +17,15 @@ function homeCreate(content){
     container.appendChild(hR);
     container.appendChild(paragraph('Best Chinese cuisine in the city','paragraph'));
 
-    content.appendChild(container);
+    return container;
 }
 
-
+function loadHome(){
+    const main = document.getElementById('main');
+    main.innerHTML = '';
+    main.appendChild(homeCreate());
+ }
 
 export {
-    homeCreate
+    loadHome
 };
